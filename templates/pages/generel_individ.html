@@ -1,0 +1,20 @@
+{% extends 'layouts/main.html' %}
+{% block title %}About{% endblock %}
+{% block content %}
+
+
+<div class="page-header">
+  <p>Ge din åsikt</p>
+</div>
+
+  <div class='apare' id='exhgt'>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Åsikter</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Halt på vägen till skolan"></textarea>
+      </div>
+  </div>
+
+  <button type="button" class="btn btn-primary"><a href="{{ url_for('submit_school_individ') }}" style="text-decoration: none; color: white;">Submit</button>
+</div>
+
+{% endblock %}

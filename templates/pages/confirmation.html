@@ -1,0 +1,27 @@
+{% extends 'layouts/main.html' %}
+{% block title %}About{% endblock %}
+{% block content %}
+
+
+<div class="page-header">
+<h1 style="text-align: center;">Bidrag inskickat!</h1>
+</div>
+
+<div class="container">
+<script>
+        // Your application has indicated there's an error
+        window.setTimeout(function(){
+
+// Move to a new location or you can do something else
+window.location.href ="{{ url_for('home') }}";
+
+}, 5000);
+</script>
+        <img src="../../static/img/thumbsup.png" width='100%' height='auto'>
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

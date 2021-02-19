@@ -43,53 +43,66 @@ def login_required(test):
 
 @app.route('/')
 def home():
-    return render_template('pages/placeholder.interactmap.html')
-
-
-@app.route('/about')
-def about():
-    return render_template('pages/placeholder.about.html')
-
-@app.route('/about2')
-def about2():
-    return render_template('pages/placeholder.about2.html')
-
-@app.route('/about3')
-def about3():
-    return render_template('pages/placeholder.about3.html')
-
-@app.route('/submit')
-def submit():
-    return render_template('pages/placeholder.submit.html')
+    return render_template('pages/home.html')
 
 @app.route('/choose')
 def choose():
-    return render_template('pages/placeholder.choose.html')
+    return render_template('pages/choose.html')
 
-@app.route('/interactmap')
-def interactmap():
-    return render_template('pages/placeholder.interactmap.html')
+@app.route('/school')
+def school():
+    return render_template('pages/school.html')
 
+@app.route('/generel_individ')
+def generel_individ():
+    return render_template('pages/generel_individ.html')
+
+@app.route('/generel_klass')
+def generel_klass():
+    return render_template('pages/generel_klass.html')
+
+@app.route('/submit_school_individ')
+def submit_school_individ():
+    return render_template('pages/submit_school_individ.html')
+
+@app.route('/projects')
+def projects():
+    return render_template('pages/projects.html')
+
+@app.route('/question1')
+def question1():
+    return render_template('pages/question1.html')
+
+@app.route('/question2')
+def question2():
+    return render_template('pages/question2.html')
+
+@app.route('/question3')
+def question3():
+    return render_template('pages/question3.html')
+
+@app.route('/lekplats')
+def lekplats():
+    return render_template('pages/lekplats.html')
+
+@app.route('/allman')
+def allman():
+    return render_template('pages/allman.html')
+
+@app.route('/confirmation')
+def confirmation():
+    return render_template('pages/confirmation.html')
 
 @app.route('/login')
 def login():
     form = LoginForm(request.form)
     return render_template('forms/login.html', form=form)
 
-
-@app.route('/forgot')
-def forgot():
-    form = ForgotForm(request.form)
-    return render_template('forms/forgot.html', form=form)
-
 # Error handlers.
-
-
 @app.errorhandler(500)
 def internal_error(error):
     #db_session.rollback()
     return render_template('errors/500.html'), 500
-
 
 @app.errorhandler(404)
 def not_found_error(error):

@@ -1,0 +1,34 @@
+{% extends 'layouts/main.html' %}
+{% block title %}Choose{% endblock %}
+{% block content %}
+
+
+<div class="page-header">
+    <h1 style="text-align: center;">Välj åtgärd</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg" style="border-style: solid; color: black;">
+            <h1 style="text-align: center;">Aktuella projekt</h1>
+            <div class="list-group">
+                <a href="{{ url_for('question1') }}" class="list-group-item list-group-item-action">2021-FEB: Nacksta för barn</a></a>
+            </div>
+        </div>
+
+        <div class="col-lg" style="border-style: solid; color: black;">
+            <h1 style="text-align: center;">Historiska projekt</h1>
+            <div class="list-group">
+                <a href="{{ url_for('lekplats') }}" class="list-group-item list-group-item-action">2020-DEC: Lekplats</a></a>
+                <a href="{{ url_for('allman') }}" class="list-group-item list-group-item-action">2020-JUN: Allmän</a></a>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+</div>
+
+{% endblock %}
