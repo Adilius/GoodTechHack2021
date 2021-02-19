@@ -1,0 +1,28 @@
+{% extends 'layouts/main.html' %}
+{% block title %}About{% endblock %}
+{% block content %}
+
+
+<div class="page-header">
+  <h1>Frågor</h1>
+  <p>2. Vad behövs mer?</p>
+</div>
+
+  <div class='apare' id='exhgt'>
+    <img src='https://www.ostersund.se/images/18.60c19fa716cc9f42df631073/1597991190452/Gatubelysning2.jpg' width='200' height='200'
+      alt='Skate' /> &nbsp; &nbsp;
+    <img
+      src='https://helsingborg.se/wp-content/uploads/2017/05/cykla_cykelbana_markering_1920x1080_foto_lotta_ahlberg.jpg'
+      width='200' height='200' alt='volley' /> &nbsp; &nbsp;
+    <img
+      src='https://se.glasdon.com/images/products/400/Stanford-S-014-B.jpg'
+      width='200' height='200' alt='fotboll' />
+      <img
+      src='https://www.norrtalje.se/globalassets/mediaflowpro/overgangstalle_norrtalje.jpg'
+      width='200' height='200' alt='basket' />
+  </div>
+
+  <button type="button" class="btn btn-primary"><a href="{{ url_for('about3') }}" style="text-decoration: none; color: white;">Next question</button>
+</div>
+
+{% endblock %}

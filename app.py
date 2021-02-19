@@ -15,8 +15,7 @@ import os
 
 app = Flask(__name__)
 app.config.from_object('config')
-logger = create_logger(app)
-db = SQLAlchemy(app)
+#db = SQLAlchemy(app)
 
 # Automatically tear down SQLAlchemy.
 '''
@@ -51,17 +50,22 @@ def home():
 def about():
     return render_template('pages/placeholder.about.html')
 
+@app.route('/about2')
+def about2():
+    return render_template('pages/placeholder.about2.html')
+
+@app.route('/about3')
+def about3():
+    return render_template('pages/placeholder.about3.html')
+
+@app.route('/submit')
+def submit():
+    return render_template('pages/placeholder.submit.html')
 
 @app.route('/login')
 def login():
     form = LoginForm(request.form)
     return render_template('forms/login.html', form=form)
-
-
-@app.route('/register')
-def register():
-    form = RegisterForm(request.form)
-    return render_template('forms/register.html', form=form)
 
 
 @app.route('/forgot')
@@ -87,10 +91,10 @@ if not app.debug:
     file_handler.setFormatter(
         Formatter('%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]')
     )
-    logger.setLevel(logging.INFO)
+    app.logger.setLevel(logging.INFO)
     file_handler.setLevel(logging.INFO)
-    logger.addHandler(file_handler)
-    logger.info('errors')
+    app.logger.addHandler(file_handler)
+    app.logger.info('errors')
 
 #----------------------------------------------------------------------------#
 # Launch.
@@ -98,6 +102,8 @@ if not app.debug:
 
 # Default port:
 if __name__ == '__main__':
+    app.config['TEMPLATES_AUTO_RELOAD'] = True #Fixes caching stuff
+    app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
     app.run()
 
 # Or specify port manually:

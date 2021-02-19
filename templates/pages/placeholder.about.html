@@ -2,13 +2,27 @@
 {% block title %}About{% endblock %}
 {% block content %}
 
+
 <div class="page-header">
-  <h1>About Page</h1>
+  <h1>Frågor</h1>
+  <p>1. Nytt parkbygge i Nacksta</p>
 </div>
-<p class="lead">This is just a placeholder page which should be replaced with real content.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tellus ligula, imperdiet id lobortis sit amet, scelerisque non sapien. Duis quis dui quis mauris dapibus fringilla. Pellentesque nec tellus ac diam volutpat malesuada.</p>
-<p>In quam arcu, interdum vel arcu viverra, vulputate convallis massa. Sed hendrerit velit a arcu euismod, sit amet consequat lacus imperdiet. Nullam quis dui sapien. Vestibulum placerat, justo non fringilla laoreet, dui ipsum posuere nisi, nec vestibulum eros leo ut sapien.</p>
-<p>Vivamus eu felis sed magna scelerisque semper in et libero. Curabitur sed convallis odio, quis venenatis sapien. In convallis a velit ac commodo. Donec sapien ligula, vestibulum ut nisi accumsan, facilisis pretium est. Fusce varius semper orci, et egestas nulla cursus a. Phasellus aliquam, mi ac adipiscing lobortis, ipsum augue aliquam ligula, quis fermentum mi augue vel ligula.</p>
-<p>Integer elementum malesuada dolor in aliquet.</p>
+
+  <div class='apare' id='exhgt'>
+    <img src='https://www.orebroskateboard.se/wp-content/uploads/2019/02/park-03.jpg' width='200' height='200'
+      alt='Skate' /> &nbsp; &nbsp;
+    <img
+      src='https://motionera.stockholm/optimized/serviceunitspage/filer/hitta/c7f500f5-fb94-4b1c-8051-a4ee9a891614.jpeg'
+      width='200' height='200' alt='volley' /> &nbsp; &nbsp;
+    <img
+      src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/7-mannaplaner%E2%80%93flygbild_06_september_2014.jpg/250px-7-mannaplaner%E2%80%93flygbild_06_september_2014.jpg'
+      width='200' height='200' alt='fotboll' />
+      <img
+      src='https://stockholmbasket.se/wp-content/uploads/2020/03/3.-Kronobergsparken-1-1200-1024x683-1.jpg'
+      width='200' height='200' alt='basket' />
+  </div>
+
+  <button type="button" class="btn btn-primary"><a href="{{ url_for('about2') }}" style="text-decoration: none; color: white;">Next question</button>
+</div>
 
 {% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'layouts/main.html' %}
+{% block title %}About{% endblock %}
+{% block content %}
+
+
+<div class="page-header">
+  <h1>Revy</h1>
+</div>
+
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action">Stad: Sundsvall</a>
+    <a href="#" class="list-group-item list-group-item-action">Skola: S:t Olofsskolan</a>
+    <a href="#" class="list-group-item list-group-item-action">Födelseår: 2000</a>
+    <a href="#" class="list-group-item list-group-item-action">Kön: Man</a>
+    <a href="#" class="list-group-item list-group-item-action">Funktionsvariationer: Inga</a>
+    <a href="#" class="list-group-item list-group-item-action">Fråga Parkbygge: Skatepark
+        <img src="https://www.orebroskateboard.se/wp-content/uploads/2019/02/park-03.jpg" width='150' height='150'></a>
+    <a href="#" class="list-group-item list-group-item-action">Fråga Behov: Parkbänk
+        <img src="https://se.glasdon.com/images/products/400/Stanford-S-014-B.jpg" width='150' height='150'></a>
+    <a href="#" class="list-group-item list-group-item-action">Fråga åsikt: Skatepark: Halt på vägen till skolan</a>
+  </div>
+
+  <button type="button" class="btn btn-primary"><a href="{{ url_for('home') }}" style="text-decoration: none; color: white;">Skicka in</button>
+
+
+
+{% endblock %}
