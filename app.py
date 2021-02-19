@@ -43,7 +43,7 @@ def login_required(test):
 
 @app.route('/')
 def home():
-    return render_template('pages/placeholder.home.html')
+    return render_template('pages/placeholder.interactmap.html')
 
 
 @app.route('/about')
@@ -61,6 +61,15 @@ def about3():
 @app.route('/submit')
 def submit():
     return render_template('pages/placeholder.submit.html')
+
+@app.route('/choose')
+def choose():
+    return render_template('pages/placeholder.choose.html')
+
+@app.route('/interactmap')
+def interactmap():
+    return render_template('pages/placeholder.interactmap.html')
+
 
 @app.route('/login')
 def login():

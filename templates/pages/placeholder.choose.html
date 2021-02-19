@@ -1,0 +1,29 @@
+{% extends 'layouts/main.html' %}
+{% block title %}About{% endblock %}
+{% block content %}
+
+
+<div class="page-header">
+  <h1 style="text-align: center;">Välj åtgärd</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg" style="border-style: solid; color: black;">
+      <a href="{{ url_for('home') }}" style="text-decoration: none;">
+        <h1 style="text-align: center;">Generell synpunkt</h1>
+        <img src="../../static/img/school-map.png" width='100%' height='auto'>
+      </a>
+    </div>
+    <div class="col-lg" style="border-style: solid; color: black;">
+      <a href="{{ url_for('interactmap') }}" style="text-decoration: none;">
+        <h1 style="text-align: center;">Aktuella projekt</h1>
+        <img src="../../static/img/mini-map.PNG" width='100%' height='auto'>
+      </a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+{% endblock %}
