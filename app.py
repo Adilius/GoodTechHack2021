@@ -71,6 +71,14 @@ def lekplats():
 def allman():
     return render_template('pages/allman.html')
 
+@app.route('/bidrag')
+def bidrag():
+    return render_template('pages/bidrag.html')
+
+@app.route('/confirmation_bidrag')
+def confirmation_bidrag():
+    return render_template('pages/confirmation_bidrag.html')
+
 @app.route('/confirmation')
 def confirmation():
     return render_template('pages/confirmation.html')

@@ -1,0 +1,27 @@
+{% extends 'layouts/main.html' %}
+{% block title %}About{% endblock %}
+{% block content %}
+
+
+<div class="page-header">
+<h1 style="text-align: center;">Bidrag ansökt!</h1>
+</div>
+
+<div class="container">
+<script>
+        // Your application has indicated there's an error
+        window.setTimeout(function(){
+
+// Move to a new location or you can do something else
+window.location.href ="{{ url_for('form_projects') }}";
+
+}, 4000);
+</script>
+        <img src="../../static/img/thumbsup.png" width='60%' height='auto' style="margin-left: auto; margin-right: auto; display: block;">
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
