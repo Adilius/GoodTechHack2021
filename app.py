@@ -9,37 +9,8 @@ from logging import Formatter, FileHandler
 from forms import *
 import os
 
-#----------------------------------------------------------------------------#
-# App Config.
-#----------------------------------------------------------------------------#
-
 app = Flask(__name__)
 app.config.from_object('config')
-#db = SQLAlchemy(app)
-
-# Automatically tear down SQLAlchemy.
-'''
-@app.teardown_request
-def shutdown_session(exception=None):
-    db_session.remove()
-'''
-
-# Login required decorator.
-'''
-def login_required(test):
-    @wraps(test)
-    def wrap(*args, **kwargs):
-        if 'logged_in' in session:
-            return test(*args, **kwargs)
-        else:
-            flash('You need to login first.')
-            return redirect(url_for('login'))
-    return wrap
-'''
-#----------------------------------------------------------------------------#
-# Controllers.
-#----------------------------------------------------------------------------#
-
 
 @app.route('/')
 def home():
@@ -113,7 +84,7 @@ def internal_error(error):
 
 @app.errorhandler(404)
 def not_found_error(error):
-    return render_template('errors/404.html'), 404
+    return render_template('errors/404.html')
 
 if not app.debug:
     file_handler = FileHandler('error.log')
@@ -125,9 +96,6 @@ if not app.debug:
     app.logger.addHandler(file_handler)
     app.logger.info('errors')
 
-#----------------------------------------------------------------------------#
-# Launch.
-#----------------------------------------------------------------------------#
 
 # Default port:
 if __name__ == '__main__':

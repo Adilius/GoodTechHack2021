@@ -1,8 +1,8 @@
 // set image properties, for Highlight effect added when click
 var imgProp = {
   'padding': '3px',
-  'backgroundColor': '#eded01',
-  'borderSize': '1ps',
+  'backgroundColor': '#000000',
+  'borderSize': '2ps',
   'borderStyle': 'dashed',
   'borderColor': '#0001fe'
  };
