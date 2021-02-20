@@ -63,15 +63,13 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li {% if request.endpoint == 'home' %} class="active" {% endif %}><a href="{{ url_for('home') }}">home</a></li>
-            <li {% if request.endpoint == 'choose' %} class="active" {% endif %}><a href="{{ url_for('choose') }}">choose</a></li>
-            <li {% if request.endpoint == 'school' %} class="active" {% endif %}><a href="{{ url_for('school') }}">school</a></li>
-            <li {% if request.endpoint == 'generel' %} class="active" {% endif %}><a href="{{ url_for('generel') }}">generel</a></li>
-            <li {% if request.endpoint == 'submit' %} class="active" {% endif %}><a href="{{ url_for('submit') }}">submit</a></li>
-            <li {% if request.endpoint == 'projects' %} class="active" {% endif %}><a href="{{ url_for('projects') }}">projects</a></li>
+            <li {% if request.endpoint == 'home' %} class="active" {% endif %}><a href="{{ url_for('home') }}">Område</a></li>
+            <li {% if request.endpoint == 'choose' %} class="active" {% endif %}><a href="{{ url_for('choose') }}">Åtgärd</a></li>
+            <li {% if request.endpoint == 'form_school' %} class="active" {% endif %}><a href="{{ url_for('form_school') }}">Skola</a></li>
+            <li {% if request.endpoint == 'projects' %} class="active" {% endif %}><a href="{{ url_for('projects') }}">Projekt</a></li>
           </ul>
           <ul class="nav navbar-nav pull-right">
-            <li><a href="{{ url_for('login') }}">Login</a></li>
+            {% if request.endpoint != 'home' %} <li><a>Nacksta</a></li> {% endif %}
           </ul>
         </div><!--/.nav-collapse -->
       </div>

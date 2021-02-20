@@ -15,7 +15,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels: ['Belysning', 'Lekparker', 'Trottoarer'],
         datasets: [{
-            label: '',
+            label: 'Antal barns val',
             data: [12, 19, 3, 5],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -42,6 +42,42 @@ var myChart = new Chart(ctx, {
 });
 </script>
 </div>
+
+<h1>Åsikter</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Skola</th>
+        <th scope="col">Kön</th>
+        <th scope="col">Födelseår</th>
+        <th scope="col">Åsikt</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>S:t Olofsskolan</td>
+        <td>Kille</td>
+        <td>2010</td>
+        <td>För långt till skatepark</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>S:t Olofsskolan</td>
+        <td>Tjej</td>
+        <td>2010</td>
+        <td>Inga bänkar</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>S:t Olofsskolan</td>
+        <td>Tjej</td>
+        <td>2010</td>
+        <td>För mörkt</td>
+      </tr>
+    </tbody>
+  </table>
 
   <button type="button" class="btn btn-primary"><a href="{{ url_for('projects') }}" style="text-decoration: none; color: white;">Tillbaks</button>
 

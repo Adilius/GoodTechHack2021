@@ -49,9 +49,13 @@ def home():
 def choose():
     return render_template('pages/choose.html')
 
-@app.route('/school')
-def school():
-    return render_template('pages/school.html')
+@app.route('/form_school')
+def form_school():
+    return render_template('pages/form_school.html')
+
+@app.route('/form_projects')
+def form_projects():
+    return render_template('pages/form_projects.html')
 
 @app.route('/generel_individ')
 def generel_individ():
@@ -64,6 +68,14 @@ def generel_klass():
 @app.route('/submit_school_individ')
 def submit_school_individ():
     return render_template('pages/submit_school_individ.html')
+
+@app.route('/submit_school_klass')
+def submit_school_klass():
+    return render_template('pages/submit_school_klass.html')
+
+@app.route('/submit_school_project')
+def submit_school_project():
+    return render_template('pages/submit_school_project.html')
 
 @app.route('/projects')
 def projects():
@@ -92,11 +104,6 @@ def allman():
 @app.route('/confirmation')
 def confirmation():
     return render_template('pages/confirmation.html')
-
-@app.route('/login')
-def login():
-    form = LoginForm(request.form)
-    return render_template('forms/login.html', form=form)
 
 # Error handlers.
 @app.errorhandler(500)

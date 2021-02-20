@@ -1,0 +1,24 @@
+{% extends 'layouts/main.html' %}
+{% block title %}About{% endblock %}
+{% block content %}
+
+
+<div class="page-header">
+  <h1>Revy</h1>
+</div>
+
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action">Projekt: Nacksta för barn</a>
+    <a href="#" class="list-group-item list-group-item-action">Skola: S:t Olofsskolan</a>
+    <a href="#" class="list-group-item list-group-item-action">Födelseår: 2010</a>
+    <a href="#" class="list-group-item list-group-item-action">Kön: Kille</a>
+    <a href="#" class="list-group-item list-group-item-action">Parkbygge: Skatepark <img src="https://www.orebroskateboard.se/wp-content/uploads/2019/02/park-03.jpg" width="100px" height="100px"/></a>
+    <a href="#" class="list-group-item list-group-item-action">Behov: Parkbänk <img src="https://se.glasdon.com/images/products/400/Stanford-S-014-B.jpg" width="100px" height="100px"/></a>
+    <a href="#" class="list-group-item list-group-item-action">Extra åsikt: </a>
+  </div>
+
+  <button type="button" class="btn btn-primary"><a href="{{ url_for('confirmation') }}" style="text-decoration: none; color: white;">Skicka in</button>
+
+
+
+{% endblock %}

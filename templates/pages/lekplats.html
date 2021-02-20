@@ -4,48 +4,123 @@
 
 
 <div class="page-header">
-  <h1>Lekplats projektdata</h1>
+    <h1>Lekplats projektdata</h1>
 </div>
 <div style="height: 500px;">
-<canvas id="myChart" width="auto" height="auto"></canvas>
-<script>
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Skatepark', 'Volleybollplan', 'Fotbollsplan', 'Basketplan'],
-        datasets: [{
-            label: '',
-            data: [12, 19, 3, 5],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
+    <canvas id="myChart" width="auto" height="auto"></canvas>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Skatepark', 'Volleybollplan', 'Fotbollsplan', 'Basketplan'],
+                datasets: [{
+                    label: 'Antal barns val',
+                    data: [12, 19, 3, 5],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
                 }
-            }]
-        }
-    }
-});
-</script>
+            }
+        });
+    </script>
+</div>
+<div style="height: 500px;">
+    <canvas id="myChart2" width="auto" height="auto"></canvas>
+    <script>
+        var ctx = document.getElementById('myChart2').getContext('2d');
+        var myChart2 = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Gatubelysning', 'Cykelvägar', 'Bänkar', 'Övergångsställen'],
+                datasets: [{
+                    label: 'Antal barns val',
+                    data: [1, 3, 15, 5],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
 </div>
 
-  <button type="button" class="btn btn-primary"><a href="{{ url_for('projects') }}" style="text-decoration: none; color: white;">Tillbaks</button>
+<h1>Åsikter</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Skola</th>
+        <th scope="col">Kön</th>
+        <th scope="col">Födelseår</th>
+        <th scope="col">Åsikt</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>S:t Olofsskolan</td>
+        <td>Kille</td>
+        <td>2010</td>
+        <td>För långt till skatepark</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>S:t Olofsskolan</td>
+        <td>Tjej</td>
+        <td>2010</td>
+        <td>Inga bänkar</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>S:t Olofsskolan</td>
+        <td>Tjej</td>
+        <td>2010</td>
+        <td>För mörkt</td>
+      </tr>
+    </tbody>
+  </table>
+
+<button type="button" class="btn btn-primary"><a href="{{ url_for('projects') }}"
+        style="text-decoration: none; color: white;">Tillbaks</button>
 
 
 
